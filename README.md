@@ -66,3 +66,36 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+.col-xs-	.col-sm-	.col-md-	.col-lg-
+
+Capacidad de la aplicación para ordenar artículos por calificación o alfabéticamente
+
+Enlace al repositorio (Github) y la aplicación implementada en las páginas de Github
+responsive a movile
+
+Una vez que haya terminado, cargue su proyecto en https://pages.github.com y envíenos el enlace para revisarlo.
+
+Bono 1:
+- Botones de compartir y me gusta en Facebook con los detalles de cierto restaurante.
+
+ 
+Bono 2:
+- Esta tarea consiste en implementar una característica en la que dado un determinado punto en un mapa (podría colocar un pin en un mapa) y un radio en metros:
+- Recuento de todos los restaurantes dentro del radio proporcionado.
+- Muestra la calificación promedio de los restaurantes dentro del círculo.
+- Desviación estándar de la calificación de los restaurantes dentro del círculo
+
+ 
+Bono 3:
+- Muestre recomendaciones sobre los restaurantes más cercanos en la zona dado un punto en un mapa, un radio en metros y un rango de calificación.
+ 
+Puntos extra:
+- Historia de Git
+- Atractivo visual de la aplicación
+- Responsividad
+- Botones sociales a facebook
+- Datos estadísticos sobre restaurantes de la zona
+- Recomendaciones dadas una coordenada
+- Uso de bibliotecas externas que aporten valor a su desarrollo
+- Buenas prácticas de programación
