@@ -7,19 +7,19 @@ const Modal = ({ restaurant, i }) => {
     console.log(store.info)
     return (
         <>
-            <div class="">
+            <div className="">
                 {
-                    <div class="modal" id={`modal_${i}`} tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
+                    <div className="modal" id={`modal_${i}`} tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div className="modal-dialog">
+                            <div className="modal-content">
                                 <div>
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">{restaurant.name}</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <div className="modal-header">
+                                        <h5 className="modal-title" id="exampleModalLabel">{restaurant.name}</h5>
+                                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
-                                    <div class="modal-body">
+                                    <div className="modal-body">
                                         <div>
                                             <strong> Valoración: </strong>  &nbsp;{restaurant.rating} de 4
                                         </div>
@@ -35,18 +35,15 @@ const Modal = ({ restaurant, i }) => {
                                         <div>
                                             <strong>Contacto:</strong><br />
                                             <p className="pl-3">
-                                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                                <i className="fa fa-phone" aria-hidden="true"></i>
                                                         &nbsp;  {restaurant.contact.phone}<br />
-                                                <i class="far fa-envelope"></i> <a href="{restaurant.contact.email}">
+                                                <i className="far fa-envelope"></i> <a href="{restaurant.contact.email}">
                                                     &nbsp;  {restaurant.contact.email}</a>
                                             </p>
                                         </div>
                                     </div>
 
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
-                                    </div>
+ 
                                 </div>
 
                             </div>

@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import data from "./data1.js";
 import Modal from "./modal";
@@ -26,26 +27,39 @@ const BuscarUbicacion = props => {
 
   return (
     <div>
-      
-
       <div className="container">
         <div id="contenido1" >
-          <h3>Búqueda según dirección</h3>
-          <p>Respete Mayúsculas y minúsculas</p>
+          <div className=" contenedorBusq d-flex justify-content-between">
+          <div className="card-body contenedorBusq2">
+              <a type="button" className="btn btn-secondary" href="/buscarnombre">Encuentra tu restaurant por el nombre  </a>
 
-          <form class="form-inline my-2 my-lg-0">
-            <input
-              className="mb-5"
-              value={store.buscarUbicacion}
-              onChange={(e) => actions.handleChange(e)}
-              name="buscarUbicacion"
-              icon="search"
-              placeholder="Dirección"
-              type="" />
-          </form>
+            </div>
+            <div className="card-body contenedorBusq1">
+              <a type="button" className="btn btn-secondary" href="/buscarubicacion">Encuentra tu restaurant por la dirección</a>
+              <p className="mt-3">Escribe la dirección y aparecerán los restaurantes</p>
+              <form className="form-inline my-2 my-lg-0">
+                <input
+                  className="mb-2"
+                  value={store.buscarUbicacion}
+                  onChange={(e) => actions.handleChange(e)}
+                  name="buscarUbicacion"
+                  icon="search"
+                  placeholder="Dirección"
+                  type="" />
+              </form>
+              <small>Respete Mayúsculas y minúsculas</small>
+            </div>
+
+
+
+          </div>
+
+
           <div className="row row-cols-xs-1 row-cols-sm-2 row-cols-md-3 ">
+          <h1><strong> Elige tu Restaurante</strong></h1>                 
 
-            {store.buscarUbicacion !== "" ?
+            {
+            store.buscarUbicacion !== "" ?
               data
                 .filter((restaurant, i) => {
                   const { address } = restaurant
@@ -57,8 +71,13 @@ const BuscarUbicacion = props => {
                       <div className="">
                         <div className="card">
                           <div className="card-header">
-                            <h5 className=" text-center">
-                              {restaurant.name}
+                            <h5 className=" text-center d-flex justify-content-around">
+                              <div>{restaurant.name}</div>
+                              <div>
+                                <a href="https://www.facebook.com/">
+                                  <i className="far fa-thumbs-up"> </i>
+                                </a>
+                              </div>
                             </h5>
                           </div>
                           <div className="contenedor-img card bg-dark text-white">
@@ -82,7 +101,7 @@ const BuscarUbicacion = props => {
                               </p>
                             </p>
 
-                            <button type="button" className="btn btn-primary" data-toggle="modal" data-target={`#modal_${i}`}>
+                            <button type="button" className="btn btn-danger" data-toggle="modal" data-target={`#modal_${i}`}>
                               Más información
                                     </button>
                           </div>

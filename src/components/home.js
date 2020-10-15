@@ -24,9 +24,9 @@ const Home = props => {
 
     return (
         <>
-
-            <div className="">
-                <div className="d-flex justify-content-between">
+            {/* Carrousel */}
+            <div>
+                <div id="contenedorCarr" className="d-flex justify-content-between">
                     <div className="card-body card-carr">
                         <Carrousel />
                     </div>
@@ -37,10 +37,15 @@ const Home = props => {
                         <Carrousel2 />
                     </div>
                 </div>
+                {/* fin carrousel */}
 
                 <div className="row">
                     <div className="col-md-1 "></div>
-                    <div className=" col-md-10 col-xs-10 mr-2 mb-4 ">
+                    <div className="col-md-10 col-xs-10 mr-2 mb-4 ">
+                    <h1><strong> Elige tu Restaurante</strong></h1>                 
+
+
+
                         <hr />
                         <div className="row row-cols-xs-1 row-cols-sm-2 row-cols-md-3 ">
                             {
@@ -50,8 +55,13 @@ const Home = props => {
                                             <div className="">
                                                 <div className="card">
                                                     <div className="card-header">
-                                                        <h5 className=" text-center">
+                                                        <h5 className=" text-center d-flex justify-content-around">
                                                             {restaurant.name}
+                                                            <div>
+                                                                <a href="https://www.facebook.com/">
+                                                                    <i className="far fa-thumbs-up"> </i>
+                                                                </a>
+                                                            </div>
                                                         </h5>
                                                     </div>
                                                     <div className="contenedor-img card bg-dark text-white">
@@ -75,7 +85,7 @@ const Home = props => {
                                                             </p>
                                                         </p>
 
-                                                        <button type="button" className="btn btn-primary" data-toggle="modal" data-target={`#modal_${i}`}>
+                                                        <button type="button" className="btn btn-danger" data-toggle="modal" data-target={`#modal_${i}`}>
                                                             Más información
                                                 </button>
                                                         {/* creo id para llamar al modal con un id q sea unico en el proyecto y lo uso con el index #modal_${i}*/}
@@ -94,7 +104,6 @@ const Home = props => {
                     </div>
                 </div>
             </div>
-
 
         </>
     )

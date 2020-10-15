@@ -1,32 +1,57 @@
 body{
+  margin-left: 1% !important;
+  width: 97.8%;
+  background-image: url("https://tse1.mm.bing.net/th?id=OIP.izOyKSBRTn6ta4Y1p1GsBwAAAA&pid=Api&P=0&w=300&h=300");
 
 }
-
+h1{
+  background-color: white;
+  margin-left: 35%;
+}
 #imagen{
   border: 15px solid ;
   height: 250px;
   border-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTFxsnbPsW1ffdO1n9c6gfaiQNzfnN9gf2AIQ&usqp=CAU) 30 round;
 }
+
 #navbar{
   width: 100%;
+  background-color: #e3f2fd !important;
 }
+.navbar-nav{
+  margin-right: -10px !important;
+}
+
+/* Carrousel */
 
 #carouselExampleFade,
 #carouselExampleFade1,
 #carouselExampleFade2{
-  margin: 5px;
+  margin-left: 5px;
+  margin-right: 0 !important;
   width: 400px !important;
   height: 300px !important;
 }
+#contenedorCarr{
+  margin-bottom: 100px;
+}
 
+#contenedorCarr > img{
+  height: 100px !important;
+}
 .card-carr{
   width: 200px !important;
   height: 200px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
+
+/* Contenido de la pagina */
 #contenido1{
   padding-top: 1%;
 }
+
 .card{
   box-shadow: 2px 2px 5px #999;
 }
@@ -45,7 +70,46 @@ body{
   margin-top: -15px;
   opacity: 1;
 }
+button{
+  margin-left: 50% !important;
+}
 
+button:hover{
+  margin-left: 45% !important;
+  height: 45px;
+  margin-top: -2.4% !important;
+  width: 170px;
+  background-color: rgba(255, 38, 0, 0.658) !important;
+}
+
+
+
+/* Busqueda */
+
+.contenedorBusq{
+  margin-bottom: 2%;
+}
+.contenedorBusq2{
+  border: black solid 1px;
+  background-color: #f5deb3;
+  margin-left: 10px;
+  }
+
+.contenedorBusq1{
+  border: black solid 1px;
+  background-color: burlywood;
+}
+
+.btn-secondary{
+  margin-left: 20% ;
+}
+.btn-secondary:hover{
+  background-color: rgb(0, 0, 0) !important;
+}
+
+input{
+  width: 300px;
+}
 .modal-body{
   margin-left: 60px
 }

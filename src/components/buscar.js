@@ -26,22 +26,35 @@ const BuscarNombre = props => {
 
     return (
         <div>
-                    <div className="container">
+            <div className="container">
                 <div id="contenido1">
-                    <h3>Búqueda según el nombre</h3>
-                    <p>Respete Mayúsculas y minúsculas</p>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input
-                            className="mb-5"
-                            value={store.buscarRestaurant}
-                            onChange={(e) => actions.handleChange(e)}
-                            name="buscarRestaurant"
-                            icon="search"
-                            placeholder="Nombre del restaurant"
-                            type="" />
-                    </form>
+                    <div className=" contenedorBusq d-flex justify-content-between">
+
+
+                        <div className="card-body contenedorBusq2">
+                            <a type="button" className="btn btn-secondary" href="/buscarnombre">Encuentra tu restaurant por el nombre </a>
+                            <p className="mt-3">Escribe el nombre y aparecerán los restaurantes</p>
+                            <form className="form-inline my-2 my-lg-0">
+                                <input
+                                    className="mb-2"
+                                    value={store.buscarRestaurant}
+                                    onChange={(e) => actions.handleChange(e)}
+                                    name="buscarRestaurant"
+                                    icon="search"
+                                    placeholder="Nombre del restaurant"
+                                    type="" />
+                            </form>
+                            <small>Respete Mayúsculas y minúsculas</small>
+                        </div>
+                        <div className="card-body contenedorBusq1 ">
+                            <a type="button" className="btn btn-secondary" href="/buscarubicacion">Encuentra tu restaurant por la dirección</a>
+                        </div>
+                    </div>
+
                     <div className="row row-cols-xs-1 row-cols-sm-2 row-cols-md-3 ">
-                        {store.buscarRestaurant !== "" ?
+                   <h1><strong> Elige tu Restaurante</strong></h1>                 
+                        {
+                        store.buscarRestaurant !== "" ?
                             data
                                 .filter((restaurant, i) => {
                                     const { name } = restaurant
@@ -53,8 +66,13 @@ const BuscarNombre = props => {
                                             <div className="">
                                                 <div className="card">
                                                     <div className="card-header">
-                                                        <h5 className=" text-center">
-                                                            {restaurant.name}
+                                                        <h5 className=" text-center d-flex justify-content-around">
+                                                            <div>{restaurant.name}</div>
+                                                            <div>
+                                                                <a href="https://www.facebook.com/">
+                                                                    <i className="far fa-thumbs-up"> </i>
+                                                                </a>
+                                                            </div>
                                                         </h5>
                                                     </div>
                                                     <div className="contenedor-img card bg-dark text-white">
@@ -68,7 +86,7 @@ const BuscarNombre = props => {
                                                             <strong>Dirección:</strong>
                                                             <p className="pl-3">
                                                                 &nbsp;{restaurant.address.street}<br />
-                                &nbsp;{restaurant.address.city}, {restaurant.address.state} <br />
+                                                                &nbsp;{restaurant.address.city}, {restaurant.address.state} <br />
                                                             </p>
                                                         </p>
                                                         <p>
@@ -78,7 +96,7 @@ const BuscarNombre = props => {
                                                             </p>
                                                         </p>
 
-                                                        <button type="button" className="btn btn-primary" data-toggle="modal" data-target={`#modal_${i}`}>
+                                                        <button type="button" className="btn btn-danger" data-toggle="modal" data-target={`#modal_${i}`}>
                                                             Más información
                                       </button>
                                                     </div>
