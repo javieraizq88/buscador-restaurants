@@ -3,27 +3,40 @@ import { Context } from "../store/appContext";
 import data1 from "./data1.js";
 import Modal from "./modal";
 import { Link } from 'react-router-dom';
+import Carrousel from "./carrousel";
+import Carrousel1 from "./carrousel1";
+import Carrousel2 from "./carrousel2";
 
 
 const Home = props => {
     const { store, actions } = useContext(Context);
-
+    // orden alfabetico 
     data1.sort(function (a, b) {
         if (a.name > b.name) {
-          return 1;
+            return 1;
         }
         if (a.name < b.name) {
-          return -1;
+            return -1;
         }
         // a must be equal to b
         return 0;
-      });
+    });
 
     return (
         <>
 
             <div className="">
-
+                <div className="d-flex justify-content-between">
+                    <div className="card-body card-carr">
+                        <Carrousel />
+                    </div>
+                    <div className="card-body card-carr">
+                        <Carrousel1 />
+                    </div>
+                    <div className="card-body card-carr">
+                        <Carrousel2 />
+                    </div>
+                </div>
 
                 <div className="row">
                     <div className="col-md-1 "></div>
@@ -78,10 +91,8 @@ const Home = props => {
                             } {/* Fin del mapeo */}
 
                         </div>
-
                     </div>
                 </div>
-
             </div>
 
 
