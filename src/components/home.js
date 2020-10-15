@@ -27,7 +27,7 @@ const Home = props => {
             {/* Carrousel */}
             <div>
                 <div id="contenedorCarr" className="d-flex justify-content-between">
-                    <div className="card-body card-carr">
+                    <div className="card-body  card-carr">
                         <Carrousel />
                     </div>
                     <div className="card-body card-carr">
@@ -44,9 +44,7 @@ const Home = props => {
                     <div className="col-md-10 col-xs-10 mr-2 mb-4 ">
                     <h1><strong> Elige tu Restaurante</strong></h1>                 
 
-
-
-                        <hr />
+                       <hr />
                         <div className="row row-cols-xs-1 row-cols-sm-2 row-cols-md-3 ">
                             {
                                 data1.map((restaurant, i) => {
