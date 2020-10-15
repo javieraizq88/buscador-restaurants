@@ -16,9 +16,6 @@
   color: rgb(10, 10, 10) ;
   opacity: 0.8;
 }
-/* img:hover + #info-rest{
-  display: block;
-} */
 
 .contenedor-img:hover{
   zoom: 1.2;
@@ -30,3 +27,15 @@
   margin-left: 60px
 }
 
+#error,
+#errorNombre{
+  background-color: rgb(223, 241, 141);
+  margin-left: 30%;
+  margin-top: 5% !important;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+#errorNombre{
+  background-color: rgb(236, 146, 146);
+}

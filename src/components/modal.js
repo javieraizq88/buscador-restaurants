@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext.js";
-import GoogleMaps from "simple-react-google-maps";
-import Map from "./map";
+
 
 const Modal = ({ restaurant, i }) => {
     const { store, actions } = useContext(Context);
@@ -10,7 +9,6 @@ const Modal = ({ restaurant, i }) => {
         <>
             <div class="">
                 {
-
                     <div class="modal" id={`modal_${i}`} tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -24,9 +22,6 @@ const Modal = ({ restaurant, i }) => {
                                     <div class="modal-body">
                                         <div>
                                             <strong> Valoración: </strong>  &nbsp;{restaurant.rating} de 4
-                                            <p className="pl-3">
-                                               
-                                            </p>
                                         </div>
 
                                         <div>
@@ -36,7 +31,7 @@ const Modal = ({ restaurant, i }) => {
                                                 &nbsp;{restaurant.address.city}, {restaurant.address.state} <br />
                                             </p>
                                         </div>
-                                        
+
                                         <div>
                                             <strong>Contacto:</strong><br />
                                             <p className="pl-3">
@@ -61,8 +56,6 @@ const Modal = ({ restaurant, i }) => {
                 } {/* Fin del mapeo */}
 
             </div>
-
-
 
         </>
     )

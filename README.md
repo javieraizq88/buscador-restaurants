@@ -67,8 +67,9 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
-.col-xs-	.col-sm-	.col-md-	.col-lg-
-
+col-xs-	col-sm-	col-md-	col-lg-
+https://tomchentw.github.io/react-google-maps/
+https://github.com/soydalto/Google-Maps-API
 Capacidad de la aplicación para ordenar artículos por calificación o alfabéticamente
 
 Enlace al repositorio (Github) y la aplicación implementada en las páginas de Github
